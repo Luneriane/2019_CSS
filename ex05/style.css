@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+hr {
+    width: 5em;
+    margin-left: 0;
+    margin-bottom: 2em;
+}
+
+div {
+    width: 40vw;
+}
+p {
+    padding: 1em;
+}
+em {
+    float: left;
+    font-size: 3rem;
+    line-height: 1em;
+    font-style: normal;
+    font-weight: bold;
+    margin-right: 0.1em;
+}
+.toolTip {
+    display: inline;
+    position: relative;
+    color: rgb(107, 179, 107);
+}
+.toolTipText {
+    visibility: hidden;
+    position: absolute;
+    bottom: 1.5em;
+    left: 0;
+    width: 5em;
+    z-index: 1;
+    padding: 1em;
+    color: white;
+    background-color: rgb(103, 159, 182);
+    border-radius: 1em;
+}
+.toolTipText::before {
+    position: absolute;
+    content: "";
+    bottom: -0.5em;
+    left: 2.5em;
+    border-left: 0.5em solid transparent; 
+    border-right: 0.5em solid transparent;
+    border-top: solid 0.5em rgb(103, 159, 182);
+}
+.toolTip:hover .toolTipText {
+    visibility: visible;
+}
